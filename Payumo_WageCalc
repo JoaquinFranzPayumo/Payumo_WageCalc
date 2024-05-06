@@ -1,0 +1,10 @@
+// This is a simple wage calculator function
+function calculateWage(hoursWorked, hourlyRate) {
+    return hoursWorked * hourlyRate;
+}
+
+// Example usage
+const hours = 40;
+const rate = 10;
+const wage = calculateWage(hours, rate);
+console.log("Your wage for " + hours + " hours at $" + rate + " per hour is: $" + wage);
