@@ -1,10 +1,24 @@
-// This is a simple wage calculator function
-function calculateWage(hoursWorked, hourlyRate) {
-    return hoursWorked * hourlyRate;
+public class WageCalculator {
+    public static double calculateWage(double hoursWorked, double hourlyRate) {
+        return hoursWorked * hourlyRate;
+    }
 }
 
-// Example usage
-const hours = 40;
-const rate = 10;
-const wage = calculateWage(hours, rate);
-console.log("Your wage for " + hours + " hours at $" + rate + " per hour is: $" + wage);
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter hours worked: ");
+        double hoursWorked = scanner.nextDouble();
+
+        System.out.print("Enter hourly rate: ");
+        double hourlyRate = scanner.nextDouble();
+
+        double totalWage = WageCalculator.calculateWage(hoursWorked, hourlyRate);
+        System.out.println("Total wage: $" + totalWage);
+
+        scanner.close();
+    }
+}
